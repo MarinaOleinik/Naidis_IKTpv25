@@ -17,7 +17,7 @@ namespace Naidis_IKTpv25
             Console.WriteLine("Oli loodud muutuja tekst, mis võrdub: {0}", tekst);
             Console.Write("Mis on sinu nimi?: ");
             string nimi = Console.ReadLine();
-            Console.Write("Kui vana sa oled?: ");
+            /*Console.Write("Kui vana sa oled?: ");
             try
             {
                 int vanus = int.Parse(Console.ReadLine());
@@ -39,8 +39,20 @@ namespace Naidis_IKTpv25
             catch (Exception e)
             {
                 Console.WriteLine(e);
-            }
+            }*/
 
+            Random rnd = new Random();
+            int juhuslik_arv = rnd.Next(-5, 25);
+            //1.
+            Console.WriteLine(Naidis_funktsioonid.Kuu_nimetus(juhuslik_arv));
+            juhuslik_arv = rnd.Next(-5, 25);
+            //2. 
+            tekst = Naidis_funktsioonid.Kuu_nimetus(juhuslik_arv);
+            Console.WriteLine(tekst);
+            //Juku ja kino
+            Console.Write(Osa2_funktsioonid.Juku());//vaikimisi nimi= juku
+            Console.Write(Osa2_funktsioonid.Juku(nimi));
+            Console.Write(Osa2_funktsioonid.Juku("Python"));
 
         }
 
