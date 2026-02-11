@@ -60,5 +60,54 @@ namespace Naidis_IKTpv25
             }
             return hoo;
         }
+
+        
+        public static void Muuda_element_massiivis(int[] arvud)
+        {
+            Console.WriteLine("Kuhu: ");
+            int positsioon = int.Parse(Console.ReadLine());
+            Console.WriteLine("Milliseks: ");
+            int uus_arv = int.Parse(Console.ReadLine());
+            arvud[positsioon - 1] = uus_arv;
+            Console.WriteLine("Uuendatud massiiv: ");
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.WriteLine($"Sisestatud arv: {arvud[i]}");
+            }
+        }
+        public static int[] Täida_massiiv(int[] arvud)
+        {
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.Write($"Sisesta {i + 1}. arv: ");
+                try
+                {
+                    arvud[i] = int.Parse(Console.ReadLine());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
+            return arvud;
+        }
+        public static void Massiivide_kuvamine(int[] arvud)
+        {
+            Console.WriteLine("Foreach abil:");
+            foreach (int arv in arvud)
+            {
+                Console.WriteLine($"Sisestatud arv: {arv}");
+            }
+            Console.WriteLine("For abil: esimene-> viiname");
+            for (int i = 0; i < arvud.Length; i++)
+            {
+                Console.WriteLine($"Sisestatud arv: {arvud[i]}");
+            }
+            Console.WriteLine("For abil: viimane-> esimene");
+            for (int i = arvud.Length - 1; i > -1; i--)
+            {
+                Console.WriteLine($"Sisestatud arv: {arvud[i]}");
+            }
+        }
     }
 }
