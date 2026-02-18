@@ -7,7 +7,18 @@ namespace Naidis_IKTpv25
     public class StartPage
     {
         public static void Main(string[] args)
+        
         {
+            //double[] arvud = { 1.5, 2.3, 3.7, 4.1, 5.6 };
+            double[] arvud1 = Naidis_funktsioonid.Täida_massiiv_double(new double[5]);
+            var tulemus=Osa3_funktsioonid.AnalüüsiArve(arvud1);
+            Console.WriteLine($"Summa: {tulemus.Item1}, Keskmine: {tulemus.Item2}, Korrutis: {tulemus.Item3}");
+
+            var (summa, keskmine, korrutis) = Osa3_funktsioonid.AnalüüsiArve1(arvud1);
+            Console.WriteLine($"Summa: {summa}, Keskmine: {keskmine}, Korrutis: {korrutis}");
+
+
+
             Console.WriteLine("3. Osa. Kordused ja Listid, massivid");
             Console.WriteLine("For:");
             for (int i=0; i<10;i++)
