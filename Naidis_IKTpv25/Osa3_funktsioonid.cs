@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Naidis_IKTpv25
@@ -28,5 +29,14 @@ namespace Naidis_IKTpv25
             }
             return (summa, keskmine, korrutis);
         }
+        public static Tuple<int, double, Inimene, Inimene> Statistika(List<Inimene> inimesed)
+        {
+            int summa=inimesed.Sum(i=>i.Vanus);
+            double keskmine_vanus = inimesed.Average(i => i.Vanus);
+            Inimene vanim = inimesed.OrderByDescending(i => i.Vanus).First();
+            Inimene noorim = inimesed.OrderBy(i => i.Vanus).First();
+            return Tuple.Create(summa, keskmine_vanus, noorim, vanim);
+        }
     }
+    
 }

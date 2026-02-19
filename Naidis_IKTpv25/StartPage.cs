@@ -9,6 +9,24 @@ namespace Naidis_IKTpv25
         public static void Main(string[] args)
         
         {
+            List<Inimene> Inimesed = new List<Inimene>();
+            //Inimene inimene1 = new Inimene("Marina",100);
+            //Inimesed.Add(inimene1);
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"Mis on {i+1}. inimese nimi?");
+                string nimi = Console.ReadLine();
+                Console.WriteLine($"Mis on {i+1}. inimese vanus?");
+                int vanus = int.Parse(Console.ReadLine());
+                Inimene inimene = new Inimene(nimi, vanus);
+                Inimesed.Add(inimene);
+            }
+            var analüüs= Osa3_funktsioonid.Statistika(Inimesed);
+            Console.WriteLine($"Vanuste arv: {analüüs.Item1}");
+            Console.WriteLine($"Vanuste keskmine: {analüüs.Item2}");
+            Console.WriteLine($"Noorim inimene: {analüüs.Item3.Nimi} ({analüüs.Item3.Vanus} aastat vana)");
+            Console.WriteLine($"Vanim inimene: {analüüs.Item4.Nimi} ({analüüs.Item4.Vanus} aastat vana)");
+
             //double[] arvud = { 1.5, 2.3, 3.7, 4.1, 5.6 };
             double[] arvud1 = Naidis_funktsioonid.Täida_massiiv_double(new double[5]);
             var tulemus=Osa3_funktsioonid.AnalüüsiArve(arvud1);
