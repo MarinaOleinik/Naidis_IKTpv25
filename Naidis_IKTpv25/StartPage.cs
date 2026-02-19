@@ -7,8 +7,15 @@ namespace Naidis_IKTpv25
     public class StartPage
     {
         public static void Main(string[] args)
-        
+
         {
+            // Osa 3
+            //8. Õpilastega mängimine
+            string[] opilased = { "Anna", "Peeter", "Laura", "Markus", "Artur", "Sofia", "Rasmus", "Alina", "Karl", "Maria" };
+            Osa3_funktsioonid.Õpilastega_mängimine(opilased);
+            
+            
+            //3. Nimed ja vanused
             List<Inimene> Inimesed = new List<Inimene>();
             //Inimene inimene1 = new Inimene("Marina",100);
             //Inimesed.Add(inimene1);
