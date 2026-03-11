@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Naidis_IKTpv25.MainPage</StartupObject>
+    <StartupObject>Naidis_IKTpv25.MainPageItaalia_Klassidega</StartupObject>
   </PropertyGroup>
 
 </Project>

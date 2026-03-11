@@ -266,5 +266,7 @@ namespace Naidis_IKTpv25
                 Console.WriteLine("Viga restoranimenüü töötlemisel: " + ex.Message);
             }
         }
+        
+        
     }
 }

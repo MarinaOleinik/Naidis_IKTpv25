@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Naidis_IKTpv25
 {
-    public class MainPage
+    public class MainPageItaalia
     {
         public static void Main(string[] args)
         {
@@ -15,9 +15,10 @@ namespace Naidis_IKTpv25
                 Console.WriteLine("\n============= PEAMENÜÜ =============");
                 Console.WriteLine("1 - Salvesta lemmiktoit faili (StreamWriter)");
                 Console.WriteLine("2 - Kuva kõik salvestatud toidud (StreamReader)");
-                Console.WriteLine("3 - Sisesta uued koostisosad käsitsi (List)"); Console.WriteLine("4 - Otsi koostisosa (Contains)");
+                Console.WriteLine("3 - Sisesta uued koostisosad käsitsi (List)"); 
+                Console.WriteLine("4 - Otsi koostisosa (Contains)");
                 Console.WriteLine("5 - Salvesta koostisosad tagasi faili");
-                Console.WriteLine("6 - Itaalia restorani menüü (Fail + Tuple)");
+                Console.WriteLine("6 - Itaalia restorani menüü (Fail + Tuple/Fail +Class)");
                 Console.WriteLine("0 - Välju");
                 Console.WriteLine("====================================");
 
